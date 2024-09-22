@@ -50,11 +50,11 @@ int NodoBinario<T>::altura(){
     }
     int altura;
     int alturaHijoIzq=-1, alturaHijoDer=-1;
-    if(getHijoIzq!=nullptr){
+    if(getHijoIzq()!=nullptr){
         alturaHijoIzq= getHijoIzq()->altura(); //Llama recursivamente a los hijos izquierdos
         //alturaHijoIzq=hijoIzq->altura();
     }
-    if(getHijoDer!=nullptr){
+    if(getHijoDer()!=nullptr){
         alturaHijoDer = getHijoDer()->altura(); //Llama recursivamente a los hijos derechos
         //alturaHijoDer = hijoDer()->altura();
     }

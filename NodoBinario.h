@@ -25,14 +25,9 @@ class NodoBinario{
 
         void setHijoIzq(NodoBinario<T>* izq);
         void setHijoDer(NodoBinario<T>* der);
+                 
         
-        
-        
-        
-        
-        void preOrden();
-
-        
+        void preOrden();     
         
 };
 
