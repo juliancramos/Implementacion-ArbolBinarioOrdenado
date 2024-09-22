@@ -1,5 +1,7 @@
 #include "NodoBinario.h"
 
+#include <iostream>
+
 template <class T>
 NodoBinario<T>::NodoBinario() : hijoIzq(nullptr), hijoDer(nullptr) {}
 
@@ -76,4 +78,34 @@ void NodoBinario<T>::setHijoIzq(NodoBinario<T>* izq){
 template <class T>
 void NodoBinario<T>::setHijoDer(NodoBinario<T>* der){
     hijoDer = der;
+}
+
+template <class T>
+void NodoBinario<T>::preOrden() {
+    //Primero el padre, luego hizo iquierdo y luego hijo derecho
+    std::cout << this->getDato()<<"  ";
+    if(this->getHijoIzq()!=nullptr){
+        hijoIzq->preOrden();
+    }
+
+    if(hijoDer!=nullptr){
+        hijoDer->preOrden();
+    }
+}
+
+template <class T>
+void NodoBinario<T>::posOrden() {
+    //Primero hijos, luego padre
+}
+
+template <class T>
+void NodoBinario<T>::inOrden() {
+    //Hijo izquierdo, luego padre, luego hijo derecho
+}
+
+
+
+template <class T>
+void NodoBinario<T>::nivelOrden() {
+    //Por niveles, de izquierda a derecha
 }

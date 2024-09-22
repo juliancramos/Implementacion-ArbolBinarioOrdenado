@@ -27,7 +27,11 @@ class NodoBinario{
         void setHijoDer(NodoBinario<T>* der);
                  
         
-        void preOrden();     
+        void preOrden();
+        void posOrden();
+        void inOrden();
+        void nivelOrden();
+
         
 };
 

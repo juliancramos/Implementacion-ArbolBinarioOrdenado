@@ -113,16 +113,25 @@ bool ArbolBinarioOrdenado<T>::buscar(T valorDato) {
 
 template <class T>
 void ArbolBinarioOrdenado<T>::preOrden() {
-}
-
-template <class T>
-void ArbolBinarioOrdenado<T>::inOrden() {
+    //Primero el padre, luego hizo iquierdo y luego hijo derecho
+    if(raiz!=nullptr){
+        raiz->preOrden();
+    }
 }
 
 template <class T>
 void ArbolBinarioOrdenado<T>::posOrden() {
+    //Primero hijos, luego padre
 }
 
 template <class T>
+void ArbolBinarioOrdenado<T>::inOrden() {
+    //Hijo izquierdo, luego padre, luego hijo derecho
+}
+
+
+
+template <class T>
 void ArbolBinarioOrdenado<T>::nivelOrden() {
+    //Por niveles, de izquierda a derecha
 }

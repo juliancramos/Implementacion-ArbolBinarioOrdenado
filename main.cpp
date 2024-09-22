@@ -5,16 +5,35 @@
 #include <iostream>
 
 int main(){
-    std::cout<<"hola"<<std::endl;
     ArbolBinarioOrdenado<int>* arbol = new ArbolBinarioOrdenado<int>();
-    std::cout<<"Está:"<<arbol->buscar(8)<<std::endl;
-    arbol->insertar(8);
-    arbol->insertar(14);
-    arbol->insertar(1);
+    arbol->insertar(22);
+    arbol->insertar(15);
     arbol->insertar(3);
+    arbol->insertar(8);
+    arbol->insertar(40);
+    
+    arbol->insertar(45);
+    arbol->insertar(13);
+    arbol->insertar(20);
+    arbol->insertar(30);
+    arbol->insertar(1);
+
     arbol->insertar(7);
-    std::cout<< arbol->datoRaiz() <<std::endl;
-    std::cout<<arbol->altura()<<std::endl;
-    std::cout<<arbol->esVacio()<<std::endl;
-    std::cout<<"Está:"<<arbol->buscar(8)<<std::endl;
+    arbol->insertar(34);
+    arbol->insertar(48);
+    arbol->insertar(53);
+    arbol->insertar(9);
+
+    arbol->insertar(23);
+    arbol->insertar(12);
+    arbol->insertar(51);
+    arbol->insertar(4);
+    arbol->insertar(10);
+
+    
+    // std::cout<<arbol->altura()<<std::endl;
+    // std::cout<<arbol->esVacio()<<std::endl;
+    // std::cout<<"Está:"<<arbol->buscar(8)<<std::endl;
+    std::cout<<"Pre orden: "<<std::endl;
+    arbol->preOrden();
 }
