@@ -108,6 +108,15 @@ void NodoBinario<T>::posOrden() {
 template <class T>
 void NodoBinario<T>::inOrden() {
     //Hijo izquierdo, luego padre, luego hijo derecho
+    if(this->getHijoIzq() != nullptr){
+        hijoIzq->inOrden();
+    }
+    std::cout<<this->getDato()<<"  ";
+
+    if(this->getHijoDer()!=nullptr){
+        hijoDer->inOrden();
+    }
+
 }
 
 

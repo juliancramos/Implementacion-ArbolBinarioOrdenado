@@ -41,4 +41,8 @@ int main(){
     std::cout<<"Pos-orden: "<<std::endl;
     arbol->posOrden();
     std::cout<<std::endl;
+
+    std::cout<<"In-orden: "<<std::endl;
+    arbol->inOrden();
+    std::cout<<std::endl;
 }
