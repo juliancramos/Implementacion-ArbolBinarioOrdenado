@@ -16,8 +16,6 @@ class NodoBinario{
         T& getDato();
         NodoBinario<T>* getHijoIzq() const;
         NodoBinario<T>* getHijoDer() const;
-        void adicionarDesc(T& valor);
-        void eliminarDesc (T& valor);
         bool esHoja();
         void setDato(T& datoNuevo);
         int altura();

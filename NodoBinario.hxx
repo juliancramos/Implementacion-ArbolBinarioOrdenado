@@ -8,6 +8,14 @@ NodoBinario<T>::NodoBinario() : hijoIzq(nullptr), hijoDer(nullptr) {}
 
 template <class T>
 NodoBinario<T>::~NodoBinario() {
+    if (hijoDer != nullptr) {
+        hijoDer=nullptr;
+        delete hijoDer;
+    }
+    if (hijoIzq != nullptr) {
+        hijoIzq=nullptr;
+        delete hijoIzq;
+    }
 }
 
 template <class T>
@@ -25,14 +33,6 @@ NodoBinario<T>* NodoBinario<T>::getHijoDer() const {
     return hijoDer; 
 }
 
-template <class T>
-void NodoBinario<T>::adicionarDesc(T& valor) {
-    
-}
-
-template <class T>
-void NodoBinario<T>::eliminarDesc(T& valor) {
-}
 
 template <class T>
 bool NodoBinario<T>::esHoja() {

@@ -49,4 +49,23 @@ int main(){
     std::cout<<"Nivel-orden: "<<std::endl;
     arbol->nivelOrden();
     std::cout<<std::endl;
+    std::cout<<"Eliminar: "<<arbol->eliminar(48)<<std::endl;
+
+    std::cout<<"Despues de la eliminacion:"<<std::endl;
+
+    std::cout<<"Pre-orden: "<<std::endl;
+    arbol->preOrden();
+    std::cout<<std::endl;
+
+    std::cout<<"Pos-orden: "<<std::endl;
+    arbol->posOrden();
+    std::cout<<std::endl;
+
+    std::cout<<"In-orden: "<<std::endl;
+    arbol->inOrden();
+    std::cout<<std::endl;
+
+    std::cout<<"Nivel-orden: "<<std::endl;
+    arbol->nivelOrden();
+    std::cout<<std::endl;
 }
