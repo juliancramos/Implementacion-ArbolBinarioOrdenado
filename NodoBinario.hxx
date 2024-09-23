@@ -1,6 +1,7 @@
 #include "NodoBinario.h"
 
 #include <iostream>
+#include <queue>
 
 template <class T>
 NodoBinario<T>::NodoBinario() : hijoIzq(nullptr), hijoDer(nullptr) {}
@@ -124,4 +125,19 @@ void NodoBinario<T>::inOrden() {
 template <class T>
 void NodoBinario<T>::nivelOrden() {
     //Por niveles, de izquierda a derecha
+    std::queue<NodoBinario<T>*> cola;
+    cola.push(this); // Se añade la raiz a la cola
+
+    while (!cola.empty()) {
+        NodoBinario<T>* nodoActual = cola.front();
+        cola.pop();
+        std::cout<<nodoActual->getDato() << "  ";
+        if (nodoActual->getHijoIzq() != nullptr) {
+            cola.push(nodoActual->getHijoIzq());
+        }
+        if (nodoActual->getHijoDer() != nullptr) {
+            cola.push(nodoActual->getHijoDer());
+        }
+    }
+
 }

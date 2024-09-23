@@ -136,4 +136,5 @@ void ArbolBinarioOrdenado<T>::inOrden() {
 template <class T>
 void ArbolBinarioOrdenado<T>::nivelOrden() {
     //Por niveles, de izquierda a derecha
+    raiz->nivelOrden();
 }

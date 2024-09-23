@@ -45,4 +45,8 @@ int main(){
     std::cout<<"In-orden: "<<std::endl;
     arbol->inOrden();
     std::cout<<std::endl;
+
+    std::cout<<"Nivel-orden: "<<std::endl;
+    arbol->nivelOrden();
+    std::cout<<std::endl;
 }
