@@ -141,3 +141,15 @@ void NodoBinario<T>::nivelOrden() {
     }
 
 }
+template <class T>
+int  NodoBinario<T>::tam(){
+    int tamActual=1;
+    if(this->getHijoDer()!=nullptr){
+        tamActual += getHijoDer()->tam();
+    }
+    if(this->getHijoIzq()!=nullptr){
+        tamActual += getHijoIzq()->tam();
+    }
+    return tamActual;
+    
+}

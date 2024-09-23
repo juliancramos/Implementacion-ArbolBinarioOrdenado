@@ -41,7 +41,7 @@ int ArbolBinarioOrdenado<T>::altura() {
 
 template <class T>
 int ArbolBinarioOrdenado<T>::tamano() {
-    return 0; // Valor por defecto
+    return raiz->tam();
 }
 
 template <class T>

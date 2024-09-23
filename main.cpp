@@ -49,7 +49,11 @@ int main(){
     std::cout<<"Nivel-orden: "<<std::endl;
     arbol->nivelOrden();
     std::cout<<std::endl;
+
+    std::cout<<"El tamaño actual del arbol es: "<<arbol->tamano()<<std::endl;
+    
     std::cout<<"Eliminar: "<<arbol->eliminar(15)<<std::endl;
+
 
     std::cout<<"Despues de la eliminacion:"<<std::endl;
 
@@ -68,4 +72,6 @@ int main(){
     std::cout<<"Nivel-orden: "<<std::endl;
     arbol->nivelOrden();
     std::cout<<std::endl;
+
+    std::cout<<"El tamaño actual del arbol es: "<<arbol->tamano()<<std::endl;
 }

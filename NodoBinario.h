@@ -29,6 +29,7 @@ class NodoBinario{
         void posOrden();
         void inOrden();
         void nivelOrden();
+        int tam();
 
         
 };
