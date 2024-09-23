@@ -120,37 +120,13 @@ bool ArbolBinarioOrdenado<T>::eliminar(T valorDato) {
     // Caso 2: Nodo con un solo hijo
     else if (nodo->getHijoIzq() == nullptr || nodo->getHijoDer() == nullptr) {
         NodoBinario<T>* hijo = (nodo->getHijoIzq() != nullptr) ? nodo->getHijoIzq() : nodo->getHijoDer();
-        // std::cout<<"Valor del nodo: "<<nodo->getDato()<<std::endl;
-        // std::cout<<"Valor del hijo: "<<hijo->getDato()<<std::endl;
-        // std::cout<<"Valor del padre: "<<nodoPadre->getDato()<<std::endl;
-        // std::cout<<"Hijo izquiero del nodo: "<<nodo->getHijoIzq()->getDato()<<std::endl;
-        if(nodo->getHijoIzq()!=nullptr){
-            // std::cout<<"Entra a este if"<<std::endl;
-        //     std::cout<<"Hijo izq: "<<nodo->getHijoIzq()->getDato()<<std::endl;;
-        //     std::cout<<"Hijo desde variable: "<<hijo->getDato()<<std::endl;
-            if(nodoPadre->getDato() > hijo->getDato()){
-                nodoPadre->setHijoIzq(hijo);
-            }else{
-                nodoPadre->setHijoDer(hijo);
-            }
-            
+    
+        if (nodoPadre->getDato() > nodo->getDato()) {
+            nodoPadre->setHijoIzq(hijo);
+        } else {
+            nodoPadre->setHijoDer(hijo);
         }
-        if (nodo->getHijoDer()!=nullptr ){
-            if(nodoPadre->getDato() > hijo->getDato()){
-                nodoPadre->setHijoIzq(hijo);
-            }else{
-                nodoPadre->setHijoDer(hijo);
-            }
-        //     std::cout<<"Hijo der: "<<nodo->getHijoDer()->getDato();
-        //     std::cout<<"Hijo desde variable: "<<hijo->getDato()<<std::endl;
-        //     nodoPadre->setHijoDer(hijo);
-        }
-
-
-      
-        // std::cout<<"Nodo a eliminar: "<<nodo->getDato()<<std::endl;
-        // std::cout<<"Nuevo hijo del padre: "<<nodoPadre->getHijoDer()->getDato()<<std::endl;
-        delete nodo; // Eliminar el nodo actual
+        delete nodo; // Eliminar el nodo 
     }
     // Caso 3: Nodo con dos hijos
     else {
