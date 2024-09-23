@@ -122,6 +122,7 @@ void ArbolBinarioOrdenado<T>::preOrden() {
 template <class T>
 void ArbolBinarioOrdenado<T>::posOrden() {
     //Primero hijos, luego padre
+    raiz->posOrden();
 }
 
 template <class T>

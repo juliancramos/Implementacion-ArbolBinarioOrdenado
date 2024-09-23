@@ -34,6 +34,11 @@ int main(){
     // std::cout<<arbol->altura()<<std::endl;
     // std::cout<<arbol->esVacio()<<std::endl;
     // std::cout<<"Está:"<<arbol->buscar(8)<<std::endl;
-    std::cout<<"Pre orden: "<<std::endl;
+    std::cout<<"Pre-orden: "<<std::endl;
     arbol->preOrden();
+    std::cout<<std::endl;
+
+    std::cout<<"Pos-orden: "<<std::endl;
+    arbol->posOrden();
+    std::cout<<std::endl;
 }

@@ -96,6 +96,13 @@ void NodoBinario<T>::preOrden() {
 template <class T>
 void NodoBinario<T>::posOrden() {
     //Primero hijos, luego padre
+    if(this->getHijoIzq()!=nullptr){
+        hijoIzq->posOrden();
+    }
+    if(this->getHijoDer()!=nullptr){
+        hijoDer->posOrden();
+    }
+    std::cout<<this->getDato()<<"  ";
 }
 
 template <class T>
